@@ -5,11 +5,7 @@ import { ThemeProvider } from "emotion-theming";
 import Button from "./components/Button/Button";
 import "./styles.css";
 
-const theme = {
-  background: "#000",
-  borderRadius: "50%",
-  borderColor: "#BF67AD"
-};
+import theme from "./components/theme";
 
 function App() {
   return (
