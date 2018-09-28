@@ -6,13 +6,13 @@ import styled, { css } from "react-emotion";
 const Button = props => {
   const { children, classes, element } = props;
 
-  const Container = styled(element)`
-    background: #333;
+  const Container = styled(element)(props => ({
+    background: props.theme.background
+  }));
+  const defaultClass = css`
     padding:0.5em 1em;
     border:0;
     border-radius:0.5em;
-  `;
-  const defaultClass = css`
     color: #FFF;
   `;
 
@@ -26,6 +26,7 @@ const Button = props => {
 Button.propTypes = {};
 
 Button.defaultProps = {
+  background: "#000",
   element: "button"
 };
 
